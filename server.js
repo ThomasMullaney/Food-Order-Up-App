@@ -8,9 +8,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded ({extended: true}));
 app.use(express.json());
 
-var exphndl = require("express-handlebars");
+var exphbs = require("express-handlebars");
+hbs.registerPartials('/partials/TF');
 
-app.engine("handlebars", exphndl({ defaultLayout: "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars"); 
 
 var routes = require("./controller/orderController.js");

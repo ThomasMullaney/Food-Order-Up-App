@@ -1,4 +1,8 @@
 $(function () {
+
+
+  
+  
     $(".placeOrder").on("submit", function (event) {
       event.preventDefault();
   
