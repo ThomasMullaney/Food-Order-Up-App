@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var orderModel = require("../model/orderModel");
+
 const order = require("../model/orderModel");
 
 router.get("/", function (req, res) {

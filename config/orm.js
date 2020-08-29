@@ -15,9 +15,11 @@ var orm = {
             cb(result);
         });
     },
-    updateOrder : function (id, cb) {
+    updateOrder : function (order_name, cb) {
+        console.log(id, 'is the ID')
         var querystring = "update orders set cooking = true where id = ?";
         connection.query(querystring, [id], function (err, result){
+            console.log(id, 'IS THE ID')
             if (err) throw err;
             cb(result);
         });

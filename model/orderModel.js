@@ -1,8 +1,9 @@
 // Import the ORM to create functions that will interact with the database.
 var orm = require("../config/orm");
 
-var orders = {
+const orders = {
   all: function(cb) {
+    console.log(cb, 'VALUE of CB');
     orm.selectAllOrders(function(res) {
       cb(res);
     });
@@ -14,6 +15,7 @@ var orders = {
     });
   },
   update: function(id, cb) {
+    console.log(id, "Is the ID")
     orm.updateOrder(id, function(res) {
       cb(res);
     });
