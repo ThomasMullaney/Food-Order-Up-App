@@ -9,7 +9,7 @@ app.use(express.urlencoded ({extended: true}));
 app.use(express.json());
 
 var exphbs = require("express-handlebars");
-hbs.registerPartials('/partials/TF');
+// exphbs.registerPartials('/partials/TF');
 
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars"); 
