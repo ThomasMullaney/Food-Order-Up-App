@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(137, 216, 197);
+  }
+  .centerme {
+    text-align: center;
+  }
+  h1, h2{
+    text-align: center;
+  }
+  ol {
+    text-align: center;
+  }

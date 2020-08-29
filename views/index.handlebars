@@ -1,0 +1,39 @@
+<h1>BURGERS/FOOD</h1>
+<br>
+<div class="container centerme">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Add Burger</h2>
+      <form class="placeOrder">
+        <input type="text" id="newOrder" name="name">
+        <button type="submit">ORDER UP!</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>Orders on deck</h2>
+      <ol>
+        {{#each orders}}
+        {{#unless cooking}}
+        {{> TF cooking=false}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+    <div class="col-sm">
+      <h2>Orders being cooked</h2>
+      <ol>
+        {{#each orders}}
+        {{#if cooking}}
+        {{> TF cooking=true}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+</div>
