@@ -6,7 +6,7 @@ $(function () {
         order_name: $("#newOrder").val().trim(),
       };
       $.ajax("/api/orders", {
-        type: "POST",
+        type: "POST", 
         data: newOrder,
       }).then(function () {
         alert("Order Up!");
